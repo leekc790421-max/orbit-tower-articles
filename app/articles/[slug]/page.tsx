@@ -6,6 +6,8 @@ import ShareButtons from "@/components/ShareButtons";
 import LeadMagnet from "@/components/LeadMagnet";
 import FissionModule from "@/components/FissionModule";
 import GlobalCTA from "@/components/GlobalCTA";
+import ArticleGate from "@/components/ArticleGate";
+import CreditBadge from "@/components/CreditBadge";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -94,7 +96,7 @@ export default async function ArticlePage({ params }: PageProps) {
   };
 
   return (
-    <>
+    <ArticleGate slug={slug} articleTitle={article.h1}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -114,7 +116,8 @@ export default async function ArticlePage({ params }: PageProps) {
               </div>
               <span className="font-semibold text-gray-900">Orbit Tower</span>
             </Link>
-            <nav className="flex items-center gap-6 text-sm text-gray-600">
+            <nav className="flex items-center gap-4 text-sm text-gray-600">
+              <CreditBadge />
               <a href="https://orbit.xingdeng.tw" className="hover:text-blue-600 transition">
                 體驗展示館
               </a>
@@ -301,6 +304,6 @@ export default async function ArticlePage({ params }: PageProps) {
           </div>
         </footer>
       </main>
-    </>
+    </ArticleGate>
   );
 }
