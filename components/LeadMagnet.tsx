@@ -16,7 +16,7 @@ export default function LeadMagnet() {
 
   if (submitted) {
     return (
-      <section className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 mb-12 border border-green-200 text-center">
+      <section className="glass-card rounded-xl p-8 mb-12 text-center border border-green-200">
         <svg className="w-12 h-12 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
         </svg>
@@ -31,7 +31,7 @@ export default function LeadMagnet() {
   }
 
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 mb-12 border border-blue-200">
+    <section className="glass-card rounded-xl p-8 mb-12">
       <div className="text-center mb-6">
         <span className="text-3xl mb-3 block">🎁</span>
         <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -48,7 +48,7 @@ export default function LeadMagnet() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="輸入您的 Email"
           required
-          className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="flex-1 px-4 py-3 rounded-lg bg-white/80 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <button
           type="submit"

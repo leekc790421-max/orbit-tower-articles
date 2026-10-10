@@ -12,7 +12,7 @@ export default function FissionModule({ question }: FissionModuleProps) {
 
   return (
     <section className="my-12">
-      <div className="border-t-2 border-b-2 border-blue-200 py-8 px-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl">
+      <div className="glass-card rounded-xl py-8 px-6 border border-blue-200">
         <p className="text-center text-lg font-medium text-gray-900 mb-4">
           {question}
         </p>
